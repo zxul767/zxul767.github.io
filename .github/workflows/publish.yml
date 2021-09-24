@@ -17,7 +17,8 @@ jobs:
         uses: sphinx-notes/pages@master
         with:
           target_branch: gh-pages
-          documentation_path: docs
+          repository_path: docs
+          documentation_path: source
       - name: Push (Publish) built documentation
         uses: ad-m/github-push-action@master
         with:
