@@ -14,7 +14,7 @@ jobs:
         with:
            fetch-depth: 0 # otherwise, we will fail to push refs to destination repo
       - name: Build & Commit
-        uses: sphinx-notes@pages@master
+        uses: sphinx-notes/pages@master
         with:
           target_branch: gh-pages
           documentation_path: docs
