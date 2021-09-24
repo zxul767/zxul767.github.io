@@ -2,25 +2,68 @@ name: publish
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
+      #----------------------------------------------
+      # Check out repo and set up Python
+      #----------------------------------------------
+      - name: Check out repository
         uses: actions/checkout@v2
+      - name: Set up python
+        uses: actions/setup-python@v2
         with:
-           fetch-depth: 0 # otherwise, we will fail to push refs to destination repo
-      - name: Build & Commit
-        uses: sphinx-notes/pages@master
+          python-version: 3.8
+      #----------------------------------------------
+      # Install & configure poetry
+      #----------------------------------------------
+      - name: Load cached Poetry installation
+        uses: actions/cache@v2.1.6
         with:
-          target_branch: gh-pages
-          repository_path: docs
-          documentation_path: source
-      - name: Push (Publish) built documentation
-        uses: ad-m/github-push-action@master
+          path: ~/.local
+          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/publish.yml') }}
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+      #----------------------------------------------
+      # Load cached venv if cache exists
+      #----------------------------------------------
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      #----------------------------------------------
+      # Install dependencies if cache does not exist
+      #----------------------------------------------
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install --no-interaction --no-root
+      #----------------------------------------------
+      # Install your root project, if required
+      #----------------------------------------------
+      - name: Install library
+        run: poetry install --no-interaction
+      #----------------------------------------------
+      # Build documentation
+      #----------------------------------------------
+      - name: Build Documentation
+        run: poetry run make docs
+      #----------------------------------------------
+      # Deploy documentation to gh-pages branch
+      #----------------------------------------------
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
+          publish_branch: gh-pages
+          publish_dir: ./docs/build/html
+          destination_dir: ./docs
