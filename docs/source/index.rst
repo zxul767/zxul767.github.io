@@ -1,7 +1,7 @@
-Home
+On Thinking
 ===================================
 
-**Gist** is a Python library that allows you to get the gist of any piece of information, whether it be text, images, audio or video.
+This is a test commit for the `On Thinking` book...
 
 .. math::
 
