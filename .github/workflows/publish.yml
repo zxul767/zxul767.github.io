@@ -1,0 +1,25 @@
+name: publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+           fetch-depth: 0 # otherwise, we will fail to push refs to destination repo
+      - name: Build & Commit
+        uses: sphinx-notes/pages@master
+        with:
+          target_branch: gh-pages
+          documentation_path: docs
+      - name: Push (Publish) built documentation
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
