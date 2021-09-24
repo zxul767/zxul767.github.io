@@ -1,0 +1,15 @@
+# common generic output or intermediate files
+.DS_Store
+.idea
+*.log
+tmp/
+
+# common Python files
+*.py[cod]
+*.egg
+build
+htmlcov
+
+# Sphinx build folder
+_build
+build
