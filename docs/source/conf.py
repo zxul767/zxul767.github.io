@@ -17,7 +17,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'sphinx-test'
+project = 'On Thinking'
 copyright = '2021, W. Gómez'
 author = 'W. Gómez'
 
