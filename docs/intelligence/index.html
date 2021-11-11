@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelligence &mdash; On Thinking 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/external_links.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Glossary" href="../glossary/index.html" />
+    <link rel="prev" title="On Thinking" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> On Thinking
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intelligence</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#an-elusive-definition">An Elusive Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#provisional-definitions">Provisional Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measures-of-intelligence">Measures of Intelligence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turing-s-test">Turing’s Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chollet-s-test">Chollet’s Test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">On Thinking</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Intelligence</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/intelligence/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="intelligence">
+<span id="id1"></span><h1>Intelligence<a class="headerlink" href="#intelligence" title="Permalink to this headline"></a></h1>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<ul class="simple">
+<li><p>Review F. Chollet’s ideas on measures of intelligence</p></li>
+<li><p>Expand section on measures of intelligence</p></li>
+</ul>
+</div>
+<section id="an-elusive-definition">
+<h2>An Elusive Definition<a class="headerlink" href="#an-elusive-definition" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Intelligence has no generally agreed-upon definition. Historically, its definition has shifted several times as new discoveries have been made.</p>
+</div>
+<p>There is no single definition of intelligence that all researchers across various disciplines that study cognition agree upon. It seems to be a moving target as provisional definitions fall short in light of new discoveries, observations and reflections. For instance, in the 1960s many AI researchers used to think of expert chess play as the epitome of human intelligence, a game that was thought to require deep reasoning ability to play well: “if we can solve chess, surely we’ll be well on our way to solving many other problems in artificial intelligence.” But it took only a few decades for them to realize how wrong this view was.</p>
+<p>To modern researchers, that idea may seem immediately naive but let’s keep in mind that “hindsight is always 20/20” and that “any sufficiently advanced technology in a given era is often indistinguishable from magic”. Some researchers have even half-jokingly said that <em>“AI is anything human brains can do which we haven’t yet learned how to make computers do.”</em></p>
+<p>In this regard, cognitive scientist D. Hofstadter has expressed that perhaps what AI research will ultimately prove is that the cognitive abilities that we thought made us so unique aren’t really so mysterious and impossible to imbue in machines.</p>
+<p>It’s also important to remember that even if an initial idea or development fails to meet our more sophisticated definitions of intelligence, it may still contain the seeds for powerful ideas that will form the foundation for intelligent agents that we won’t be able to dismiss as <a class="reference internal" href="../glossary/index.html#bulldozer-intelligence"><span class="std std-ref">bulldozer intelligence</span></a> or “not general intelligence” one day.</p>
+<p>Some discoveries that appear small or irrelevant at first may turn out to be fundamental building blocks upon more careful revision. The issue is sometimes one of scale. Neural Nets were known for decades before the Deep Learning boom starting in 2012, but the difficulties in scaling them to train on large enough data sets made them seem like an interesting but largely sterile effort. G. Hinton, one of the fathers of Deep Learning, tells the story of how he discarded the idea of “dropout” (a regularization technique) soon after he originally conceived it upon seeing that a hasty implementation didn’t work as he expected. Months later, he and his students revisited the idea more carefully and finally found a way to make it work.</p>
+</section>
+<section id="provisional-definitions">
+<h2>Provisional Definitions<a class="headerlink" href="#provisional-definitions" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A common but overly broad definition is <em>“an agent’s ability to solve problems.”</em> This definition implies that intelligence lies on a continuum, and varies according to the number of problems an agent can solve or learn how to solve.</p>
+</div>
+<p>Perhaps the crudest definition of intelligence we can think of is “the ability to solve problems.” However, it’s easy to see that such a definition is too vague and causes issues with our intuition about it: a pocket calculator has the ability to solve some arithmetical problems, does that qualify it as intelligent?</p>
+<p>Intuitively, what we usually mean by intelligence is not just the ability to solve specific problems, but perhaps more importantly the ability to learn how to solve new problems. This is why <a class="reference external" href="https://es.wikipedia.org/wiki/Deep_Blue">Deep Blue</a>, despite having been able to defeat the world’s chess champion in 1997, wasn’t regarded as truly intelligent by most AI researchers. From this standpoint, the ability to learn is a fundamental component of any agent that we may deem intelligent.</p>
+<p>On the other hand, as some AI researchers have argued, intelligence should be understood as lying on a continuum. If we accept that, it follows that “bulldozer intelligence”–such as the one displayed by Deep Blue–is also a form of legitimate intelligence: one which can be argued to be doing something very similar to what our imagination does in a fundamental level (i.e., simulation of possibilities in a world space.)</p>
+<p>In the context of living organisms, it is often said that intelligence can be defined as the ability to adapt and survive in a given environment. This definition is, of course, in alignment with the previous one, as the ability to adapt necessarily requires the ability to learn.</p>
+<p>Thus, a more general definition for intelligence may be:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>“An agent’s ability to learn and apply knowledge to solve problems.”</em> Here, <em>learning</em> is the crucial piece as it implies the ability to extend the set of problems the agent can solve over its lifetime.</p>
+</div>
+<p>While still quite general, this definition contains two key elements: <em>learning</em> and <em>problem solving</em>. These two fundamental ideas have spawned large areas of research, and there remain many problems to be solved in both of them.</p>
+</section>
+<section id="measures-of-intelligence">
+<h2>Measures of Intelligence<a class="headerlink" href="#measures-of-intelligence" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are no generally agreed-upon measures of intelligence. The <a class="reference external" href="https://en.wikipedia.org/wiki/Turing_test">Turing Test</a> was one of the first proposed measures, but many consider it inadequate due to its strong human-centered and subjective nature. In recent years, some interesting measures have been proposed based on more recent definitions (see <a class="reference external" href="https://arxiv.org/abs/1911.01547">F. Chollet</a>)</p>
+</div>
+<section id="turing-s-test">
+<h3>Turing’s Test<a class="headerlink" href="#turing-s-test" title="Permalink to this headline"></a></h3>
+<p>In his 1950 paper <a class="reference external" href="https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence">Computing Machinery and Intelligence</a>, Alan Turing proposed that a computer can be deemed to possess artificial intelligence if it can mimic human responses under specific conditions.</p>
+<p>Some current AI researchers still believe this definition is valid because, if the conditions and judging criteria for the test were well designed, there would be no way for a program with just a shallow understanding to pass the test. This implies, among other things, that it would have to be able to perform cognitive functions such as reasoning, analogy-making, and the ability to learn some things rather quickly.</p>
+</section>
+<section id="chollet-s-test">
+<h3>Chollet’s Test<a class="headerlink" href="#chollet-s-test" title="Permalink to this headline"></a></h3>
+<p>Other researchers think that the Turing Test is too subjective, anthropomorphic, and perhaps not even general enough. More recently, researchers such as F. Chollet have proposed less anthropomorphic measures which are based on an agent’s efficiency to turn raw world sensory input into actionable knowledge which can be used to predict various aspects of the world. This measure is compatible with the last definition of intelligence mentioned earlier, with the implicit assumption that prediction is a fundamental mechanism to solve a large variety of problems.</p>
+<p>By explicitly considering “efficiency” in that “sensory input to internal predictive model” transformation process, Chollet’s proposed measure goes beyond Turing’s qualitative measure, accepting implicitly the idea of an intelligence continuum, albeit in a more constrained setting (i.e., that of <em>learning</em>).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="On Thinking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../glossary/index.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, W. Gómez.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
