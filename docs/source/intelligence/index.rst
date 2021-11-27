@@ -1,12 +1,12 @@
 .. _intelligence:
 
-************
-Intelligence
-************
-
 .. todo::
    + Review F. Chollet's ideas on measures of intelligence
    + Expand section on measures of intelligence
+
+************
+Intelligence
+************
 
 An Elusive Definition
 #####################

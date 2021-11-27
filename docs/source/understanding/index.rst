@@ -1,11 +1,11 @@
 .. _understanding:
 
+.. todo::
+   + Link language discussion to Language Chapter (still to be written)
+
 **************
 Understanding
 **************
-
-.. todo::
-   + Link language discussion to Language Chapter (still to be written)
 
 The association between understanding and intelligence is self-evident to most of us on an intuitive level. However, when we try to articulate those intuitions to gauge whether AI systems "understand", we often find disagreement on what precisely is meant by the term.
 
