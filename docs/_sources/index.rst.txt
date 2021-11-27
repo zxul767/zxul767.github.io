@@ -11,4 +11,5 @@ On Thinking
    :maxdepth: 2
 
    intelligence/index
+   understanding/index
    glossary/index
