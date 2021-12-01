@@ -12,4 +12,5 @@ On Thinking
 
    intelligence/index
    understanding/index
+   the-society-of-mind/index
    glossary/index
